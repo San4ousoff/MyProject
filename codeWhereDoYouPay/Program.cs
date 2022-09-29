@@ -3,7 +3,7 @@
 // 2. Найти его в массиве
 // 3. Вернуть количество таких чисел в массиве
 
-Console.Write("Введите число:");
+Console.Write("Введите число: ");
 int WhereDoYouPay = Convert.ToInt32(Console.ReadLine()); // Ввод данных из терминала с помощью конвертера из string в int
 int [] arr = new int [5]; // Массив из 5 элементов
 arr [0] = 3;
@@ -17,11 +17,11 @@ int count = 0; // Счетчик количества искомых чисел
 while (n<5)
 //for(int n = 0; n < 5; n++) // вместо 5 попробовать arr.Length
 {
-    if (WhereDoYouPay == arr[n]);
+    if (WhereDoYouPay == arr[n])
     {
         count++;
     }
-n=n+1;
-// Console.WriteLine(n); // почему-то не возвращает n?
+n++;
+// Console.WriteLine(n);
 }
 Console.WriteLine($"Выбранных чисел в массиве: {count}");
