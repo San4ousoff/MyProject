@@ -14,8 +14,8 @@ arr [4] = new Random().Next(0,11);
 Console.WriteLine($"Массив: {arr[0]}, {arr[1]}, {arr[2]}, {arr[3]}, {arr[4]}"); // Вывод на экран элементов массива
 int n = 0; // Счетчик индексов массива
 int count = 0; // Счетчик количества искомых чисел
-while (n<5)
-//for(int n = 0; n < 5; n++) // вместо 5 попробовать arr.Length
+while (n < arr.Length) // Количество элементов в массиве [5]
+//for(int n = 0; n < arr.Length; n++)
 {
     if (WhereDoYouPay == arr[n])
     {
