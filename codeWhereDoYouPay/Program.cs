@@ -11,17 +11,17 @@ arr [1] = 3;
 arr [2] = 4;
 arr [3] = 3;
 arr [4] = 2;
-//Console.WriteLine($"arr: {arr[0]}, {arr[1]}, {arr[2]}, {arr[3]}, {arr[4]}"); // Вывод на экран элементов массива
-//int n = 0; // Счетчик индексов массива
+Console.WriteLine($"Массив: {arr[0]}, {arr[1]}, {arr[2]}, {arr[3]}, {arr[4]}"); // Вывод на экран элементов массива
+int n = 0; // Счетчик индексов массива
 int count = 0; // Счетчик количества искомых чисел
-//while (n<5)
-for(int n = 0; n < arr.Length; n++)
+while (n<5)
+//for(int n = 0; n < 5; n++) // вместо 5 попробовать arr.Length
 {
     if (WhereDoYouPay == arr[n]);
     {
         count++;
     }
-//n=n+1;
+n=n+1;
+// Console.WriteLine(n); // почему-то не возвращает n?
 }
-Console.WriteLine(count);
-//Console.WriteLine(n); // почему-то не возвращает n?
+Console.WriteLine($"Выбранных чисел в массиве: {count}");
