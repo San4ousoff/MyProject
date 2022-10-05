@@ -1,4 +1,54 @@
-﻿// Алгоритм
+﻿// здесь хочу написать контроль нажатой клавиши, чтобы нажать можно было только A,a,D,d,E,e
+
+using System;
+
+Console.WriteLine("Выберите операцию со строкой");
+Console.Write("(A)dd line, (D)elete line or (E)dit line: ");
+class codeWhereDoYouPay
+{
+    static void Main()
+    {
+        while(true)
+        {
+            switch(Console.ReadKey(true).KeyChar)
+            {
+                case 'a':
+                    Console.Write("A");
+                    break;
+                case 'd':
+                    Console.Write("D");
+                    break;
+                case 'e':
+                    Console.Write("E");
+                    break;
+                case (char)ConsoleKey.Backspace:
+                    PrintBackspace();
+                    break;
+                case (char)ConsoleKey.Enter:
+                    goto Next;
+            }
+        }
+        Next:
+ 
+        //Console.WriteLine("\nВы сделали свой выбор");
+        // Console.ReadKey();
+    }
+ 
+    static void PrintBackspace()
+    {
+        if (Console.CursorLeft == 0)
+            return;
+ 
+        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+        Console.Write(" ");
+        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+    }
+}
+
+
+//Console.Clear();
+/*
+// Алгоритм
 // 1. Ввести число
 // 2. Составить жесткий массив -> Составить массив рандомных чисел
 // 2. Найти заданное число в массиве
@@ -26,3 +76,9 @@ n++;
 // Console.WriteLine(n);
 }
 Console.WriteLine($"Выбранных чисел в массиве: {count}");
+*/
+
+
+
+ 
+
